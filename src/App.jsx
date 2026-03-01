@@ -474,7 +474,6 @@ function Home({ setPage }) {
           </h1>
           <div className="hero-eyebrow">🏐 Santa Monica–Malibu Public School Athletes</div>
           <p className="hero-sub">
-            Hello
           </p>
           <div className="hero-actions">
             <button className="btn-primary" onClick={() => { setPage("clinics"); window.scrollTo(0,0); }}>View Upcoming Clinics</button>
@@ -831,9 +830,11 @@ function Donate() {
         <p style={{color:"var(--muted)", fontSize:"0.95rem", marginBottom:28, fontWeight:300}}>
           We're always looking for volunteers, coaches, and community partners who share our mission.
         </p>
-        <button style={{background:"var(--navy)", color:"var(--white)", border:"none", padding:"14px 36px", borderRadius:"99px", fontFamily:"'DM Sans',sans-serif", fontWeight:600, fontSize:"0.95rem", cursor:"pointer"}}>
-          Volunteer & Partner With Us
-        </button>
+        <a href="mailto:opencourtathletics@gmail.com" style={{textDecoration:"none"}}>
+          <button style={{background:"var(--navy)", color:"var(--white)", border:"none", padding:"14px 36px", borderRadius:"99px", fontFamily:"'DM Sans',sans-serif", fontWeight:600, fontSize:"0.95rem", cursor:"pointer"}}>
+            Volunteer & Partner With Us
+          </button>
+        </a>
       </div>
     </div>
   );
@@ -856,7 +857,7 @@ function Footer({ setPage }) {
           </div>
           <div className="footer-col">
             <h4>Contact</h4>
-            <button className="footer-link">hello@opencourtaa.org</button>
+            <button className="footer-link">opencourtathletics@gmail.com</button>
             <button className="footer-link">Santa Monica, CA</button>
             <button className="footer-link" onClick={() => go("donate")}>Support Us →</button>
           </div>
