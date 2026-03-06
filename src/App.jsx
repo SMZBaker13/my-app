@@ -212,6 +212,7 @@ const STYLES = `
     font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 600;
     padding: 10px 20px; border-radius: 99px;
     transition: background 0.2s;
+    text-decoration: none; display: inline-block;
   }
   .btn-register:hover { background: var(--navy2); }
   .filter-bar { display: flex; gap: 10px; flex-wrap: wrap; margin: 32px 0; }
@@ -597,7 +598,12 @@ function Clinics() {
               <div className="clinic-card-body"><p>{c.description}</p></div>
               <div className="clinic-card-footer">
                 <div className="clinic-price">{c.price != null ? `$${c.price}` : ""} <span>{c.price != null ? "/ athlete" : ""}</span></div>
-                <button className="btn-register">{c.buttonLabel || "Register →"}</button>
+                <a
+                  className="btn-register"
+                  href={c.buttonLabel === "Express Interest →" ? "mailto:opencourtathleticassociation@gmail.com" : "https://form.jotform.com/260528534420048"}
+                  target={c.buttonLabel === "Express Interest →" ? undefined : "_blank"}
+                  rel={c.buttonLabel === "Express Interest →" ? undefined : "noopener noreferrer"}
+                >{c.buttonLabel || "Register →"}</a>
               </div>
             </div>
           ))}
