@@ -753,6 +753,8 @@ function Donate() {
   const [selected, setSelected] = useState(25);
   const [custom, setCustom] = useState("");
   const amounts = [15, 25, 100, 250];
+  const paypalAmount = selected === "custom" ? custom : selected;
+  const paypalUrl = `https://www.paypal.com/donate?business=opencourtathleticassociation%40gmail.com${paypalAmount ? `&amount=${paypalAmount}` : ""}&currency_code=USD&item_name=Open+Court+Athletic+Association`;
   return (
     <div className="page">
       <div className="donate-hero">
@@ -804,6 +806,14 @@ function Donate() {
                 ${a}
               </button>
             ))}
+            <button onClick={() => setSelected("custom")}
+              style={{flex:"1 1 60px", padding:"10px 0", borderRadius:8,
+                background: selected === "custom" ? "var(--navy)" : "var(--sand2)",
+                color: selected === "custom" ? "var(--white)" : "var(--navy)",
+                border: "2px solid " + (selected === "custom" ? "var(--navy)" : "transparent"),
+                fontFamily:"'DM Sans',sans-serif", fontWeight:700, cursor:"pointer", fontSize:"0.95rem"}}>
+              Custom
+            </button>
           </div>
           {selected === "custom" && (
             <div className="form-group">
@@ -823,11 +833,17 @@ function Donate() {
             <label className="form-label">Note (Optional)</label>
             <input className="form-input" type="text" placeholder="e.g. In honor of my athlete" />
           </div>
-          <button className="btn-donate">
+          <a
+            className="btn-donate"
+            href={paypalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{display:"block", textAlign:"center", textDecoration:"none"}}
+          >
             Donate ${selected === "custom" ? (custom || "—") : selected} →
-          </button>
+          </a>
           <p style={{textAlign:"center", fontSize:"0.78rem", color:"var(--muted)", marginTop:12}}>
-            🔒 Secure donation processing. Tax receipt emailed automatically.
+            Secure payment via PayPal. Tax receipt provided automatically.
           </p>
         </div>
       </div>
