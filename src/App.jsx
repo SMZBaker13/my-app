@@ -412,6 +412,7 @@ const CLINICS = [
   { id: 3, title: "All Skills", tag: "intermediate", tagLabel: "Intermediate", date: "Sat, Apr 11", time: "3:45–5:15 PM", grade: "4th–8th Grade (co-ed)", location: "Lincoln Middle School", focus: "All Skills", price: 25, description: "Perfect entry point for middle schoolers building on core volleyball skills. We'll cover platform passing and serve receive positioning, as well as approach footwork and arm swing mechanics. We'll also integrate some fun games like queen of the court.", icon: "🏐", buttonLabel: "Register →" },
   { id: 4, title: "Elementary Intro", tag: "beginner", tagLabel: "Beginner", date: "Not Yet Scheduled", time: "3:45–5:15 PM", grade: "2nd–5th Grade", location: "Lincoln Middle School", focus: "Basic Skills & Fun", price: 25, description: "A fun, welcoming introduction to volleyball for younger athletes. Emphasis on enthusiasm, basic ball control, and building a love for the sport.", icon: "⭐", buttonLabel: "Express Interest →" },
   { id: 5, title: "Pre-Season Prep", tag: "advanced", tagLabel: "Advanced", date: "Not Yet Scheduled", time: "3:45–5:15 PM", grade: "6th–8th Grade", location: "Lincoln Middle School", focus: "Full Skill Integration", price: 50, description: "High-intensity session designed for players preparing for tryouts or upcoming school seasons. Competitive drills, serving mechanics, and game IQ.", icon: "🎯", buttonLabel: "Express Interest →" },
+  { id: 6, title: "Parent & Me", tag: "intermediate", tagLabel: "Intermediate", date: "Not Yet Scheduled", time: "3:45–5:15 PM", grade: "All Ages", location: "Lincoln Middle School", focus: "Basic Skills & Fun", price: 15, priceUnit: "person", description: "A fun opportunity for parents who love volleyball to share the game with their kids through relaxed play and simple drills.", icon: "👨‍👩‍👧", buttonLabel: "Express Interest →" },
 ];
 const TESTIMONIALS = [
   { quote: "My daughter has gained so much confidence since attending Open Court clinics. The coaches really break things down in a way that clicks.", name: "Michal O.", role: "Parent" },
@@ -600,10 +601,10 @@ function Clinics() {
               </div>
               <div className="clinic-card-body"><p>{c.description}</p></div>
               <div className="clinic-card-footer">
-                <div className="clinic-price">{c.price != null ? `$${c.price}` : ""} <span>{c.price != null ? "/ athlete" : ""}</span></div>
+                <div className="clinic-price">{c.price != null ? `$${c.price}` : ""} <span>{c.price != null ? `/ ${c.priceUnit || "athlete"}` : ""}</span></div>
                 <a
                   className="btn-register"
-                  href={c.buttonLabel === "Express Interest →" ? "mailto:opencourtathleticassocation@gmail.com" : "https://form.jotform.com/260528534420048"}
+                  href={c.buttonLabel === "Express Interest →" ? "mailto:opencourtathleticassociation@gmail.com" : "https://form.jotform.com/260528534420048"}
                   target={c.buttonLabel === "Express Interest →" ? undefined : "_blank"}
                   rel={c.buttonLabel === "Express Interest →" ? undefined : "noopener noreferrer"}
                 >{c.buttonLabel || "Register →"}</a>
