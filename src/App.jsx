@@ -253,17 +253,8 @@ const STYLES = `
     display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
   }
   .founder-visual {
-    background: var(--navy);
     border-radius: var(--radius);
-    aspect-ratio: 4/3;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    position: relative; overflow: hidden;
-    padding: 40px;
-  }
-  .founder-visual::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 60% 30%, rgba(232,160,32,0.25), transparent 60%);
+    overflow: hidden;
   }
   .founder-monogram {
     font-family: 'Playfair Display', serif; font-size: 6rem;
