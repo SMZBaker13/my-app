@@ -539,7 +539,7 @@ function Home({ setPage }) {
           <p style={{fontSize:"1.1rem", fontWeight:300, color:"var(--navy)", marginBottom:24, maxWidth:720}}>
             We started Open Court to create more opportunities for local public school students to step onto the court, build confidence, and fall in love with the game.
           </p>
-          <button className="btn-outline" onClick={() => { setPage("about"); window.scrollTo(0,0); }}>Learn More About Us</button>
+          <button className="btn-primary" onClick={() => { setPage("about"); window.scrollTo(0,0); }}>Learn More About Us</button>
         </div>
       </div>
       {/* CTA band */}
