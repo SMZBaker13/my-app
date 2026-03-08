@@ -862,7 +862,7 @@ function Donate() {
         <p style={{color:"var(--muted)", fontSize:"0.95rem", marginBottom:28, fontWeight:300}}>
           We're always looking for volunteers, coaches, and community partners who share our mission.
         </p>
-        <a href="mailto:opencourtathleticassocation@gmail.com" style={{textDecoration:"none"}}>
+        <a href="mailto:opencourtathleticassociation@gmail.com" style={{textDecoration:"none"}}>
           <button style={{background:"var(--navy)", color:"var(--white)", border:"none", padding:"14px 36px", borderRadius:"99px", fontFamily:"'DM Sans',sans-serif", fontWeight:600, fontSize:"0.95rem", cursor:"pointer"}}>
             Volunteer & Partner With Us
           </button>
@@ -889,7 +889,7 @@ function Footer({ setPage }) {
           </div>
           <div className="footer-col">
             <h4>Contact</h4>
-            <button className="footer-link">opencourtathletics@gmail.com</button>
+            <button className="footer-link">opencourtathleticassociation@gmail.com</button>
             <button className="footer-link">Santa Monica, CA</button>
             <button className="footer-link" onClick={() => go("donate")}>Support Us →</button>
           </div>
