@@ -420,7 +420,7 @@ const TESTIMONIALS = [
 const BOARD = [
   { name: "Patrick Gallagher", role: "Board President", icon: "🏆", bio: "Patrick played at Windward High School, where he earned multiple Team MVP awards, League MVP honors, three All-League selections, and an All-CIF selection. He went on to compete with SMBC, winning a Junior Olympics gold medal and earning First Team All-American recognition." },
   { name: "Sarah Gallagher", role: "Co-Founder & Board Member", icon: "🏐", bio: "Sarah played competitively in high school and has played in several local indoor and beach volleyball leagues. As a parent of current youth athletes, she brings a player's perspective and a strong background in leadership, communications, and nonprofit strategy." },
-  { name: "Sarah Ballog Smith", role: "Secretary", icon: "⚖️", bio: "Sarah played volleyball at Northwestern (Chicago) and has played in several local indoor and beach volleyball leagues. She currently serves as a Deputy District Attorney for Los Angeles County and brings strong governance and organizational leadership experience to the board." },
+  { name: "Sarah Ballog Smith", role: "Secretary", icon: "⚖️", bio: "Sarah played volleyball at Northwestern (Chicago) and has played in several local indoor and beach volleyball leagues. As a seasoned local attorney, she also brings strong governance and organizational leadership experience to the board." },
   { name: "Jennifer Anderson", role: "Board Member", icon: "🎓", bio: "Jennifer played at Crossroads High School and now teaches there, where she coaches the 6th grade girls volleyball team. She has also played in several local indoor and beach volleyball leagues, bringing valuable insight into youth development and school athletics." },
   { name: "Wes Larmore", role: "Treasurer", icon: "📊", bio: "Wes has competed in multiple Westside volleyball leagues and brings financial oversight and community engagement experience to the organization. He ensures Open Court operates with transparency and fiscal responsibility." },
 ];
@@ -497,7 +497,7 @@ function Home({ setPage }) {
               { icon: "🔓", title: "Open Access", desc: "Designed for Santa Monica–Malibu public school students. Lower cost than traditional club models, with no barriers to entry." },
               { icon: "📈", title: "Real Development", desc: "We focus on fundamentals done correctly — passing, setting, hitting, footwork, and volleyball IQ. Strong fundamentals build confident players." },
               { icon: "🗓️", title: "Flexible Scheduling", desc: "Register for the clinics that fit your schedule. No year-round obligation. Works alongside school teams and other activities." },
-              { icon: "🤝", title: "Community-Rooted", desc: "Built by volleyball families for volleyball families. Our coaches and board are locally invested athletes who are giving back to this community." },
+              { icon: "🤝", title: "Community-Rooted", desc: "Built by volleyball families for volleyball families. Our coaches and board members are local athletes invested in giving back to this community." },
             ].map(c => (
               <div className="why-card" key={c.title}>
                 <div className="why-icon">{c.icon}</div>
@@ -508,7 +508,8 @@ function Home({ setPage }) {
           </div>
         </div>
       </div>
-      {/* Testimonials */}
+      {/* A Message from Our Board */}
+      {/* SAVED: Testimonials section — restore when ready
       <div className="testimonial-band">
         <div className="testimonial-inner">
           <div className="section-label">What Families Say</div>
@@ -528,6 +529,12 @@ function Home({ setPage }) {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+      END SAVED TESTIMONIALS */}
+      <div className="testimonial-band">
+        <div className="testimonial-inner">
+          <div className="section-label">A Message from Our Board</div>
         </div>
       </div>
       {/* CTA band */}
@@ -613,7 +620,7 @@ function Clinics() {
 function HowItWorks() {
   const skills = [
     ["🎯", "Passing Precision"], ["✋", "Setting Consistency"], ["💥", "Hitting Mechanics"],
-    ["👣", "Footwork & Positioning"], ["🧠", "Volleyball IQ"], ["💪", "Confidence Under Pressure"],
+    ["👣", "Footwork & Positioning"], ["🧠", "Volleyball IQ"],
   ];
   return (
     <div className="page">
@@ -693,12 +700,24 @@ function About({ setPage }) {
           </div>
           <div className="about-text">
             <div className="section-label">The Founders</div>
-            <h2 className="section-title">Experienced Athletes Investing Back Into the Next Generation</h2>
+            <h2 className="section-title">Creating More Opportunities to Play</h2>
             <p>
-              Open Court Athletic Association was founded by the Gallagher family — longtime volleyball players and local parents who understand both the competitive side of the sport and the realities families face today.
+              Open Court began with a simple question: why was it so hard for local public school students to find a place to play indoor volleyball?
             </p>
             <p>
-              Seeing the gap between what young athletes need and what's accessible to public school families in this community, they created Open Court — a program designed around opportunity, not exclusivity.
+              Santa Monica has great sports opportunities — beach programs, recreation leagues, and competitive club teams. But many families discover that rec leagues fill quickly, club volleyball requires a major financial and time commitment, and beach volleyball is a very different experience than indoor team play.
+            </p>
+            <p>
+              At the same time, many of our public school gyms were regularly rented to outside organizations, leaving local students with limited access to play in their own school community.
+            </p>
+            <p>
+              We created Open Court to change that.
+            </p>
+            <p>
+              Our goal is to provide accessible indoor volleyball clinics for Santa Monica–Malibu public school students — a place where kids can learn the fundamentals, build confidence, and develop a love for the game without the pressure, cost, or time commitment of club volleyball.
+            </p>
+            <p>
+              We believe every student should have the opportunity to step onto the court, improve their skills, and experience the joy of being part of a team.
             </p>
           </div>
         </div>
