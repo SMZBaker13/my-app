@@ -698,10 +698,7 @@ function About({ setPage }) {
       <div className="section">
         <div className="about-founder">
           <div className="founder-visual">
-            <div style={{width:"100%", aspectRatio:"4/3", borderRadius:"var(--radius)", background:"rgba(26,46,68,0.08)", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", border:"2px dashed rgba(26,46,68,0.2)", color:"var(--muted)"}}>
-              <div style={{fontSize:"3rem", marginBottom:12}}>📷</div>
-              <div style={{fontSize:"0.9rem", fontWeight:500}}>Photo Coming Soon</div>
-            </div>
+            <img src="https://image.education.trccompanies.com/EloquaImages/clients/GNA/%7Bec3bfe3b-9658-432c-939b-4491c6e5ba6a%7D_OOCA_Logo_%281%29.png" alt="OOCA Logo" style={{width:"100%", borderRadius:"var(--radius)", display:"block"}} />
           </div>
           <div className="about-text">
             <div className="section-label">The Founders</div>
