@@ -535,6 +535,10 @@ function Home({ setPage }) {
       <div className="testimonial-band">
         <div className="testimonial-inner">
           <div className="section-label">A Message from Our Board</div>
+          <p style={{fontSize:"1.1rem", fontWeight:300, color:"var(--navy)", marginBottom:24, maxWidth:720}}>
+            We started Open Court to create more opportunities for local public school students to step onto the court, build confidence, and fall in love with the game.
+          </p>
+          <button className="btn-outline" onClick={() => { setPage("about"); window.scrollTo(0,0); }}>Learn More About Us</button>
         </div>
       </div>
       {/* CTA band */}
@@ -714,7 +718,7 @@ function About({ setPage }) {
               We created Open Court to change that.
             </p>
             <p>
-              Our goal is to provide accessible indoor volleyball clinics for Santa Monica–Malibu public school students — a place where kids can learn the fundamentals, build confidence, and develop a love for the game without the pressure, cost, or time commitment of club volleyball.
+              Our goal is to provide accessible indoor volleyball clinics for Santa Monica–Malibu public school students — a place where kids can learn the fundamentals, build confidence, and develop a love for the game.
             </p>
             <p>
               We believe every student should have the opportunity to step onto the court, improve their skills, and experience the joy of being part of a team.
