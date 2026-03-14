@@ -1,4 +1,28 @@
 import { useState, useEffect, useRef } from "react";
+
+// ─── Per-page SEO metadata ────────────────────────────────────────────────────
+const PAGE_META = {
+  home: {
+    title: "Open Court Athletics | Santa Monica Youth Volleyball Clinics",
+    description: "Affordable youth volleyball clinics in Santa Monica for grades 2–8. Saturday skill sessions at Lincoln Middle School. Open Court Athletic Association — 501(c)(3) nonprofit.",
+  },
+  clinics: {
+    title: "Saturday Volleyball Clinics Santa Monica | Open Court Athletics",
+    description: "Browse upcoming Saturday volleyball clinics in Santa Monica for grades 2–8. Beginner, intermediate & advanced sessions. $25/clinic. Limited enrollment — register today.",
+  },
+  howitworks: {
+    title: "How Youth Volleyball Training Works | Open Court Athletics",
+    description: "Learn how Open Court volleyball clinics work — choose a session, show up ready to train, and build real skills. Serving Santa Monica–Malibu public school athletes.",
+  },
+  about: {
+    title: "About Us | Open Court Athletic Association Santa Monica",
+    description: "Founded by Santa Monica volleyball families, Open Court Athletic Association expands access to youth volleyball for SMMUSD public school students. 501(c)(3) nonprofit.",
+  },
+  donate: {
+    title: "Donate | Support Youth Volleyball in Santa Monica | Open Court",
+    description: "Support Open Court Athletic Association's mission to make youth volleyball accessible for Santa Monica public school athletes. Tax-deductible donation via PayPal.",
+  },
+};
 // ─── Design Tokens ───────────────────────────────────────────────────────────
 // Palette: warm sand, deep ocean navy, sun gold, fresh sage
 // Fonts: Playfair Display (display) + DM Sans (body)
@@ -437,11 +461,11 @@ function Nav({ currentPage, setCurrentPage }) {
   const keys = ["home", "clinics", "howitworks", "about", "donate"];
   const go = (key) => { setCurrentPage(key); setMobileOpen(false); window.scrollTo(0,0); };
   return (
-    <nav className={`nav${scrolled ? " scrolled" : ""}`}>
-      <div className="nav-logo" onClick={() => go("home")}>Open <span>Court</span></div>
+    <nav className={`nav${scrolled ? " scrolled" : ""}`} aria-label="Main navigation">
+      <div className="nav-logo" onClick={() => go("home")} role="link" aria-label="Open Court Athletics — home" tabIndex={0} onKeyDown={e => e.key === "Enter" && go("home")}>Open <span>Court</span></div>
       <div className={`nav-links${mobileOpen ? " open" : ""}`}>
         {links.map((l, i) => (
-          <button key={l} className={`nav-link${currentPage === keys[i] ? " active" : ""}`} onClick={() => go(keys[i])}>{l}</button>
+          <button key={l} className={`nav-link${currentPage === keys[i] ? " active" : ""}`} onClick={() => go(keys[i])} aria-current={currentPage === keys[i] ? "page" : undefined}>{l}</button>
         ))}
         <button className="nav-cta" onClick={() => go("clinics")}>Register Now</button>
       </div>
@@ -466,6 +490,8 @@ function Home({ setPage }) {
           </h1>
           <div className="hero-eyebrow">🏐 Santa Monica–Malibu Public School Athletes</div>
           <p className="hero-sub">
+            Affordable Saturday volleyball clinics for grades 2–8 in Santa Monica.
+            Expert coaching, small groups, and real skill development — no year-long commitment required.
           </p>
           <div className="hero-actions">
             <button className="btn-primary" onClick={() => { setPage("clinics"); window.scrollTo(0,0); }}>View Upcoming Clinics</button>
@@ -689,7 +715,7 @@ function About({ setPage }) {
       <div className="section">
         <div className="about-founder">
           <div className="founder-visual">
-            <img src="https://image.education.trccompanies.com/EloquaImages/clients/GNA/%7Bec3bfe3b-9658-432c-939b-4491c6e5ba6a%7D_OOCA_Logo_%281%29.png" alt="OOCA Logo" style={{width:"100%", borderRadius:"var(--radius)", display:"block"}} />
+            <img src="https://image.education.trccompanies.com/EloquaImages/clients/GNA/%7Bec3bfe3b-9658-432c-939b-4491c6e5ba6a%7D_OOCA_Logo_%281%29.png" alt="Open Court Athletic Association — Santa Monica youth volleyball nonprofit logo" loading="lazy" style={{width:"100%", borderRadius:"var(--radius)", display:"block"}} />
           </div>
           <div className="about-text">
             <div className="section-label">The Founders</div>
@@ -865,8 +891,8 @@ function Footer({ setPage }) {
           </div>
           <div className="footer-col">
             <h4>Contact</h4>
-            <button className="footer-link">opencourtathletics@gmail.com</button>
-            <button className="footer-link">Santa Monica, CA</button>
+            <a className="footer-link" href="mailto:opencourtathleticassocation@gmail.com" style={{textDecoration:"none"}}>opencourtathleticassocation@gmail.com</a>
+            <span className="footer-link" style={{display:"block"}}>Santa Monica, CA 90401</span>
             <button className="footer-link" onClick={() => go("donate")}>Support Us →</button>
           </div>
         </div>
@@ -881,6 +907,19 @@ function Footer({ setPage }) {
 // ─── App ─────────────────────────────────────────────────────────────────────
 export default function App() {
   const [page, setPage] = useState("home");
+
+  // Update document title and meta description on page change
+  useEffect(() => {
+    const meta = PAGE_META[page] || PAGE_META.home;
+    document.title = meta.title;
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute("content", meta.description);
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", meta.title);
+    let ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", meta.description);
+  }, [page]);
+
   const pages = {
     home: <Home setPage={setPage} />,
     clinics: <Clinics />,
