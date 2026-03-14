@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://opencourtathletics.org/sitemap.xml
