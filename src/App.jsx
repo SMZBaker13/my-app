@@ -904,8 +904,23 @@ function Footer({ setPage }) {
   );
 }
 // ─── App ─────────────────────────────────────────────────────────────────────
+const PAGE_META = {
+  home:       { title: "Open Court Athletics | Santa Monica Youth Volleyball Clinics", description: "Affordable youth volleyball clinics in Santa Monica for grades 2–8. Saturday skill sessions at Lincoln Middle School. 501(c)(3) nonprofit." },
+  clinics:    { title: "Saturday Volleyball Clinics Santa Monica | Open Court Athletics", description: "Browse upcoming Saturday volleyball clinics in Santa Monica for grades 2–8. Beginner, intermediate & advanced sessions. $25/clinic. Limited enrollment — register today." },
+  howitworks: { title: "How Youth Volleyball Training Works | Open Court Athletics", description: "Learn how Open Court volleyball clinics work — choose a session, show up ready to train, and build real skills. Serving Santa Monica–Malibu public school athletes." },
+  about:      { title: "About Us | Open Court Athletic Association Santa Monica", description: "Founded by Santa Monica volleyball families, Open Court Athletic Association expands access to youth volleyball for SMMUSD public school students. 501(c)(3) nonprofit." },
+  donate:     { title: "Donate | Support Youth Volleyball in Santa Monica | Open Court", description: "Support Open Court Athletic Association's mission to make youth volleyball accessible for Santa Monica public school athletes. Tax-deductible donation via PayPal." },
+};
 export default function App() {
   const [page, setPage] = useState("home");
+  useEffect(() => {
+    const meta = PAGE_META[page];
+    if (!meta) return;
+    document.title = meta.title;
+    let el = document.querySelector('meta[name="description"]');
+    if (!el) { el = document.createElement("meta"); el.setAttribute("name", "description"); document.head.appendChild(el); }
+    el.setAttribute("content", meta.description);
+  }, [page]);
   const pages = {
     home: <Home setPage={setPage} />,
     clinics: <Clinics />,
