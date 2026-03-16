@@ -443,7 +443,7 @@ function Nav({ currentPage, setCurrentPage }) {
       <div className="nav-logo" onClick={() => go("home")}>Open <span>Court</span></div>
       <div className={`nav-links${mobileOpen ? " open" : ""}`}>
         {links.map((l, i) => (
-          <button key={l} className={`nav-link${currentPage === keys[i] ? " active" : ""}`} onClick={() => go(keys[i])}>{l}</button>
+          <button key={l} className={`nav-link${currentPage === keys[i] ? " active" : ""}`} aria-current={currentPage === keys[i] ? "page" : undefined} onClick={() => go(keys[i])}>{l}</button>
         ))}
         <button className="nav-cta" onClick={() => go("clinics")}>Register Now</button>
       </div>
@@ -702,7 +702,7 @@ function About({ setPage }) {
       <div className="section">
         <div className="about-founder">
           <div className="founder-visual">
-            <img src="https://image.education.trccompanies.com/EloquaImages/clients/GNA/%7Bec3bfe3b-9658-432c-939b-4491c6e5ba6a%7D_OOCA_Logo_%281%29.png" alt="OOCA Logo" style={{width:"100%", borderRadius:"var(--radius)", display:"block"}} />
+            <img src="https://image.education.trccompanies.com/EloquaImages/clients/GNA/%7Bec3bfe3b-9658-432c-939b-4491c6e5ba6a%7D_OOCA_Logo_%281%29.png" alt="Founded by Santa Monica volleyball families, Open Court Athletic Association expands access to youth volleyball for SMMUSD public school students. 501(c)(3) nonprofit." style={{width:"100%", borderRadius:"var(--radius)", display:"block"}} />
           </div>
           <div className="about-text">
             <div className="section-label">The Founders</div>
@@ -890,7 +890,7 @@ function Footer({ setPage }) {
           </div>
           <div className="footer-col">
             <h4>Contact</h4>
-            <button className="footer-link">opencourtathleticassociation@gmail.com</button>
+            <a className="footer-link" href="mailto:opencourtathleticassociation@gmail.com">opencourtathleticassociation@gmail.com</a>
             <button className="footer-link">Santa Monica, CA</button>
             <button className="footer-link" onClick={() => go("donate")}>Support Us →</button>
           </div>
