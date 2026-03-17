@@ -407,11 +407,13 @@ const STYLES = `
 `;
 // ─── Data ────────────────────────────────────────────────────────────────────
 const CLINICS = [
-  { id: 1, title: "All Skills", tag: "intermediate", tagLabel: "Intermediate", date: "Sat, Mar 14", time: "3:45–5:15 PM", grade: "4th–8th Grade (co-ed)", location: "Lincoln Middle School", focus: "All Skills", price: 25, description: "Perfect entry point for middle schoolers building on core volleyball skills. We'll cover platform passing and serve receive positioning, as well as approach footwork and arm swing mechanics. We'll also integrate some fun games like queen of the court.", icon: "🏐", buttonLabel: "Register →" },
-  { id: 2, title: "All Skills", tag: "intermediate", tagLabel: "Intermediate", date: "Sat, Mar 28", time: "3:45–5:15 PM", grade: "4th–8th Grade (co-ed)", location: "Lincoln Middle School", focus: "All Skills", price: 25, description: "Perfect entry point for middle schoolers building on core volleyball skills. We'll cover platform passing and serve receive positioning, as well as approach footwork and arm swing mechanics. We'll also integrate some fun games like queen of the court.", icon: "🏐", buttonLabel: "Register →" },
-  { id: 3, title: "All Skills", tag: "intermediate", tagLabel: "Intermediate", date: "Sat, Apr 11", time: "3:45–5:15 PM", grade: "4th–8th Grade (co-ed)", location: "Lincoln Middle School", focus: "All Skills", price: 25, description: "Perfect entry point for middle schoolers building on core volleyball skills. We'll cover platform passing and serve receive positioning, as well as approach footwork and arm swing mechanics. We'll also integrate some fun games like queen of the court.", icon: "🏐", buttonLabel: "Register →" },
+  { id: 2, title: "All Skills", tag: "intermediate", tagLabel: "Intermediate", date: "Sat, Mar 28", time: "3:45–5:15 PM", grade: "4th–8th Grade (co-ed)", location: "Lincoln Middle School", focus: "All Skills", price: 25, description: "Perfect entry point for middle schoolers building on core volleyball skills. We'll cover platform passing and serve receive positioning, as well as approach footwork and arm swing mechanics. We'll also integrate some fun games like queen of the court.", spotsLeft: true, icon: "🏐", buttonLabel: "Register →" },
+  { id: 3, title: "All Skills", tag: "intermediate", tagLabel: "Intermediate", date: "Sat, Apr 11", time: "3:45–5:15 PM", grade: "4th–8th Grade (co-ed)", location: "Lincoln Middle School", focus: "All Skills", price: 25, description: "Perfect entry point for middle schoolers building on core volleyball skills. We'll cover platform passing and serve receive positioning, as well as approach footwork and arm swing mechanics. We'll also integrate some fun games like queen of the court.", spotsLeft: true, icon: "🏐", buttonLabel: "Register →" },
+  { id: 1, title: "All Skills", tag: "intermediate", tagLabel: "Intermediate", date: "Sat, May 9", time: "3:45–5:15 PM", grade: "4th–8th Grade (co-ed)", location: "Lincoln Middle School", focus: "All Skills", price: 35, description: "Perfect entry point for middle schoolers building on core volleyball skills. We'll cover platform passing and serve receive positioning, as well as approach footwork and arm swing mechanics. We'll also integrate some fun games like queen of the court.", boldSuffix: "This session will include OCAA Coach Patrick Gallagher, as well as Coach Olivier Ged who played as an Opposite at the college level for Université de Lyon and is a current head coach at a westside volleyball club.", icon: "🏐", buttonLabel: "Register →" },
+  { id: 7, title: "All Skills", tag: "intermediate", tagLabel: "Intermediate", date: "Sat, May 30", time: "3:45–5:15 PM", grade: "4th–8th Grade (co-ed)", location: "Lincoln Middle School", focus: "All Skills", price: 35, description: "Perfect entry point for middle schoolers building on core volleyball skills. We'll cover platform passing and serve receive positioning, as well as approach footwork and arm swing mechanics. We'll also integrate some fun games like queen of the court.", boldSuffix: "This session will include OCAA Coach Patrick Gallagher, as well as Coach Olivier Ged who played as an Opposite at the college level for Université de Lyon and is a current head coach at a westside volleyball club.", icon: "🏐", buttonLabel: "Register →" },
   { id: 4, title: "Elementary Intro", tag: "beginner", tagLabel: "Beginner", date: "Not Yet Scheduled", time: "3:45–5:15 PM", grade: "2nd–5th Grade", location: "Lincoln Middle School", focus: "Basic Skills & Fun", price: 25, description: "A fun, welcoming introduction to volleyball for younger athletes. Emphasis on enthusiasm, basic ball control, and building a love for the sport.", icon: "⭐", buttonLabel: "Express Interest →" },
   { id: 5, title: "Pre-Season Prep", tag: "advanced", tagLabel: "Advanced", date: "Not Yet Scheduled", time: "3:45–5:15 PM", grade: "6th–8th Grade", location: "Lincoln Middle School", focus: "Full Skill Integration", price: 50, description: "High-intensity session designed for players preparing for tryouts or upcoming school seasons. Competitive drills, serving mechanics, and game IQ.", icon: "🎯", buttonLabel: "Express Interest →" },
+  { id: 6, title: "Parent & Me", tag: "intermediate", tagLabel: "Intermediate", date: "Not Yet Scheduled", time: "3:45–5:15 PM", grade: "All Ages", location: "Lincoln Middle School", focus: "Basic Skills & Fun", price: 15, priceUnit: "person", description: "A fun opportunity for parents who love volleyball to share the game with their kids through relaxed play and simple drills.", icon: "👨‍👩‍👧", buttonLabel: "Express Interest →" },
 ];
 const TESTIMONIALS = [
   { quote: "My daughter has gained so much confidence since attending Open Court clinics. The coaches really break things down in a way that clicks.", name: "Michal O.", role: "Parent" },
@@ -420,7 +422,7 @@ const TESTIMONIALS = [
 const BOARD = [
   { name: "Patrick Gallagher", role: "Board President", icon: "🏆", bio: "Patrick played at Windward High School, where he earned multiple Team MVP awards, League MVP honors, three All-League selections, and an All-CIF selection. He went on to compete with SMBC, winning a Junior Olympics gold medal and earning First Team All-American recognition." },
   { name: "Sarah Gallagher", role: "Co-Founder & Board Member", icon: "🏐", bio: "Sarah played competitively in high school and has played in several local indoor and beach volleyball leagues. As a parent of current youth athletes, she brings a player's perspective and a strong background in leadership, communications, and nonprofit strategy." },
-  { name: "Sarah Ballog Smith", role: "Secretary", icon: "⚖️", bio: "Sarah played volleyball at Northwestern (Chicago) and has played in several local indoor and beach volleyball leagues. She currently serves as a Deputy District Attorney for Los Angeles County and brings strong governance and organizational leadership experience to the board." },
+  { name: "Sarah Ballog Smith", role: "Secretary", icon: "⚖️", bio: "Sarah played volleyball at Northwestern (Chicago) and has played in several local indoor and beach volleyball leagues. As a seasoned local attorney, she also brings strong governance and organizational leadership experience to the board." },
   { name: "Jennifer Anderson", role: "Board Member", icon: "🎓", bio: "Jennifer played at Crossroads High School and now teaches there, where she coaches the 6th grade girls volleyball team. She has also played in several local indoor and beach volleyball leagues, bringing valuable insight into youth development and school athletics." },
   { name: "Wes Larmore", role: "Treasurer", icon: "📊", bio: "Wes has competed in multiple Westside volleyball leagues and brings financial oversight and community engagement experience to the organization. He ensures Open Court operates with transparency and fiscal responsibility." },
 ];
@@ -441,7 +443,7 @@ function Nav({ currentPage, setCurrentPage }) {
       <div className="nav-logo" onClick={() => go("home")}>Open <span>Court</span></div>
       <div className={`nav-links${mobileOpen ? " open" : ""}`}>
         {links.map((l, i) => (
-          <button key={l} className={`nav-link${currentPage === keys[i] ? " active" : ""}`} onClick={() => go(keys[i])}>{l}</button>
+          <button key={l} className={`nav-link${currentPage === keys[i] ? " active" : ""}`} aria-current={currentPage === keys[i] ? "page" : undefined} onClick={() => go(keys[i])}>{l}</button>
         ))}
         <button className="nav-cta" onClick={() => go("clinics")}>Register Now</button>
       </div>
@@ -497,7 +499,7 @@ function Home({ setPage }) {
               { icon: "🔓", title: "Open Access", desc: "Designed for Santa Monica–Malibu public school students. Lower cost than traditional club models, with no barriers to entry." },
               { icon: "📈", title: "Real Development", desc: "We focus on fundamentals done correctly — passing, setting, hitting, footwork, and volleyball IQ. Strong fundamentals build confident players." },
               { icon: "🗓️", title: "Flexible Scheduling", desc: "Register for the clinics that fit your schedule. No year-round obligation. Works alongside school teams and other activities." },
-              { icon: "🤝", title: "Community-Rooted", desc: "Built by volleyball families for volleyball families. Our coaches and board are locally invested athletes who are giving back to this community." },
+              { icon: "🤝", title: "Community-Rooted", desc: "Built by volleyball families for volleyball families. Our coaches and board members are local athletes invested in giving back to this community." },
             ].map(c => (
               <div className="why-card" key={c.title}>
                 <div className="why-icon">{c.icon}</div>
@@ -508,7 +510,8 @@ function Home({ setPage }) {
           </div>
         </div>
       </div>
-      {/* Testimonials */}
+      {/* A Message from Our Board */}
+      {/* SAVED: Testimonials section — restore when ready
       <div className="testimonial-band">
         <div className="testimonial-inner">
           <div className="section-label">What Families Say</div>
@@ -528,6 +531,16 @@ function Home({ setPage }) {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+      END SAVED TESTIMONIALS */}
+      <div className="testimonial-band">
+        <div className="testimonial-inner">
+          <div className="section-label">A Message from Our Board</div>
+          <p style={{fontSize:"1.1rem", fontWeight:300, color:"var(--navy)", marginBottom:24, maxWidth:720}}>
+            We started Open Court to create more opportunities for local public school students to step onto the court, build confidence, and fall in love with the game.
+          </p>
+          <button className="btn-primary" onClick={() => { setPage("about"); window.scrollTo(0,0); }}>Learn More About Us</button>
         </div>
       </div>
       {/* CTA band */}
@@ -587,12 +600,12 @@ function Clinics() {
                 {c.location && <div className="clinic-meta-item">📍 {c.location}</div>}
                 <div className="clinic-meta-item">🎯 {c.focus}</div>
               </div>
-              <div className="clinic-card-body"><p>{c.description}</p></div>
+              <div className="clinic-card-body"><p>{c.description}{c.boldSuffix && <> <strong>{c.boldSuffix}</strong></>}</p>{c.spotsLeft && <p><strong><em>Only a few spots left!</em></strong></p>}</div>
               <div className="clinic-card-footer">
-                <div className="clinic-price">{c.price != null ? `$${c.price}` : ""} <span>{c.price != null ? "/ athlete" : ""}</span></div>
+                <div className="clinic-price">{c.price != null ? `$${c.price}` : ""} <span>{c.price != null ? `/ ${c.priceUnit || "athlete"}` : ""}</span></div>
                 <a
                   className="btn-register"
-                  href={c.buttonLabel === "Express Interest →" ? "mailto:opencourtathleticassocation@gmail.com" : "https://form.jotform.com/260528534420048"}
+                  href={c.buttonLabel === "Express Interest →" ? "mailto:opencourtathleticassociation@gmail.com" : "https://form.jotform.com/260528534420048"}
                   target={c.buttonLabel === "Express Interest →" ? undefined : "_blank"}
                   rel={c.buttonLabel === "Express Interest →" ? undefined : "noopener noreferrer"}
                 >{c.buttonLabel || "Register →"}</a>
@@ -613,7 +626,7 @@ function Clinics() {
 function HowItWorks() {
   const skills = [
     ["🎯", "Passing Precision"], ["✋", "Setting Consistency"], ["💥", "Hitting Mechanics"],
-    ["👣", "Footwork & Positioning"], ["🧠", "Volleyball IQ"], ["💪", "Confidence Under Pressure"],
+    ["👣", "Footwork & Positioning"], ["🧠", "Volleyball IQ"],
   ];
   return (
     <div className="page">
@@ -689,16 +702,28 @@ function About({ setPage }) {
       <div className="section">
         <div className="about-founder">
           <div className="founder-visual">
-            <img src="https://image.education.trccompanies.com/EloquaImages/clients/GNA/%7Bec3bfe3b-9658-432c-939b-4491c6e5ba6a%7D_OOCA_Logo_%281%29.png" alt="OOCA Logo" style={{width:"100%", borderRadius:"var(--radius)", display:"block"}} />
+            <img src="https://image.education.trccompanies.com/EloquaImages/clients/GNA/%7Bec3bfe3b-9658-432c-939b-4491c6e5ba6a%7D_OOCA_Logo_%281%29.png" alt="Founded by Santa Monica volleyball families, Open Court Athletic Association expands access to youth volleyball for SMMUSD public school students. 501(c)(3) nonprofit." style={{width:"100%", borderRadius:"var(--radius)", display:"block"}} />
           </div>
           <div className="about-text">
             <div className="section-label">The Founders</div>
-            <h2 className="section-title">Experienced Athletes Investing Back Into the Next Generation</h2>
+            <h2 className="section-title">Creating More Opportunities to Play</h2>
             <p>
-              Open Court Athletic Association was founded by the Gallagher family — longtime volleyball players and local parents who understand both the competitive side of the sport and the realities families face today.
+              Open Court began with a simple question: why was it so hard for local public school students to find a place to play indoor volleyball?
             </p>
             <p>
-              Seeing the gap between what young athletes need and what's accessible to public school families in this community, they created Open Court — a program designed around opportunity, not exclusivity.
+              Santa Monica has great sports opportunities — beach programs, recreation leagues, and competitive club teams. But many families discover that rec leagues fill quickly, club volleyball requires a major financial and time commitment, and beach volleyball is a very different experience than indoor team play.
+            </p>
+            <p>
+              At the same time, many of our public school gyms were regularly rented to outside organizations, leaving local students with limited access to play in their own school community.
+            </p>
+            <p>
+              We created Open Court to change that.
+            </p>
+            <p>
+              Our goal is to provide accessible indoor volleyball clinics for Santa Monica–Malibu public school students — a place where kids can learn the fundamentals, build confidence, and develop a love for the game.
+            </p>
+            <p>
+              We believe every student should have the opportunity to step onto the court, improve their skills, and experience the joy of being part of a team.
             </p>
           </div>
         </div>
@@ -838,7 +863,7 @@ function Donate() {
         <p style={{color:"var(--muted)", fontSize:"0.95rem", marginBottom:28, fontWeight:300}}>
           We're always looking for volunteers, coaches, and community partners who share our mission.
         </p>
-        <a href="mailto:opencourtathleticassocation@gmail.com" style={{textDecoration:"none"}}>
+        <a href="mailto:opencourtathleticassociation@gmail.com" style={{textDecoration:"none"}}>
           <button style={{background:"var(--navy)", color:"var(--white)", border:"none", padding:"14px 36px", borderRadius:"99px", fontFamily:"'DM Sans',sans-serif", fontWeight:600, fontSize:"0.95rem", cursor:"pointer"}}>
             Volunteer & Partner With Us
           </button>
@@ -865,7 +890,7 @@ function Footer({ setPage }) {
           </div>
           <div className="footer-col">
             <h4>Contact</h4>
-            <button className="footer-link">opencourtathletics@gmail.com</button>
+            <a className="footer-link" href="mailto:opencourtathleticassociation@gmail.com">opencourtathleticassociation@gmail.com</a>
             <button className="footer-link">Santa Monica, CA</button>
             <button className="footer-link" onClick={() => go("donate")}>Support Us →</button>
           </div>
@@ -879,8 +904,23 @@ function Footer({ setPage }) {
   );
 }
 // ─── App ─────────────────────────────────────────────────────────────────────
+const PAGE_META = {
+  home:       { title: "Open Court Athletics | Santa Monica Youth Volleyball Clinics", description: "Affordable youth volleyball clinics in Santa Monica for grades 2–8. Saturday skill sessions at Lincoln Middle School. 501(c)(3) nonprofit." },
+  clinics:    { title: "Saturday Volleyball Clinics Santa Monica | Open Court Athletics", description: "Browse upcoming Saturday volleyball clinics in Santa Monica for grades 2–8. Beginner, intermediate & advanced sessions. $25/clinic. Limited enrollment — register today." },
+  howitworks: { title: "How Youth Volleyball Training Works | Open Court Athletics", description: "Learn how Open Court volleyball clinics work — choose a session, show up ready to train, and build real skills. Serving Santa Monica–Malibu public school athletes." },
+  about:      { title: "About Us | Open Court Athletic Association Santa Monica", description: "Founded by Santa Monica volleyball families, Open Court Athletic Association expands access to youth volleyball for SMMUSD public school students. 501(c)(3) nonprofit." },
+  donate:     { title: "Donate | Support Youth Volleyball in Santa Monica | Open Court", description: "Support Open Court Athletic Association's mission to make youth volleyball accessible for Santa Monica public school athletes. Tax-deductible donation via PayPal." },
+};
 export default function App() {
   const [page, setPage] = useState("home");
+  useEffect(() => {
+    const meta = PAGE_META[page];
+    if (!meta) return;
+    document.title = meta.title;
+    let el = document.querySelector('meta[name="description"]');
+    if (!el) { el = document.createElement("meta"); el.setAttribute("name", "description"); document.head.appendChild(el); }
+    el.setAttribute("content", meta.description);
+  }, [page]);
   const pages = {
     home: <Home setPage={setPage} />,
     clinics: <Clinics />,
