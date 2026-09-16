@@ -473,11 +473,11 @@ function Home({ setPage }) {
           </div>
           <div className="hero-stats">
             <div className="hero-stat">
-              <div className="hero-stat-num">$25</div>
+              <div className="hero-stat-num">$10</div>
               <div className="hero-stat-label">Starting per clinic</div>
             </div>
             <div className="hero-stat">
-              <div className="hero-stat-num">15</div>
+              <div className="hero-stat-num">Up to 25</div>
               <div className="hero-stat-label">Attendees per clinic</div>
             </div>
             <div className="hero-stat">
