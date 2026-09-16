@@ -480,10 +480,7 @@ function Home({ setPage }) {
               <div className="hero-stat-num">Up to 25</div>
               <div className="hero-stat-label">Attendees per clinic</div>
             </div>
-            <div className="hero-stat">
-              <div className="hero-stat-num">0</div>
-              <div className="hero-stat-label">Year-long commitments</div>
-            </div>
+
           </div>
         </div>
       </div>
