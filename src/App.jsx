@@ -661,10 +661,13 @@ function Clinics() {
           </div>
         )}
       </div>
+      {/* Full-width photo banner */}
+      <div style={{width: "100%", height: "420px", overflow: "hidden"}}>
+        <img src="/clinic-action.jpg" alt="Athletes in action at an Open Court volleyball clinic" style={{width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%", display: "block"}} />
+      </div>
     </div>
   );
 }
-function HowItWorks() {
   const skills = [
     ["🎯", "Passing Precision"], ["✋", "Setting Consistency"], ["💥", "Hitting Mechanics"],
     ["👣", "Footwork & Positioning"], ["🧠", "Volleyball IQ"],
