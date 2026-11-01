@@ -86,6 +86,23 @@ const STYLES = `
     min-height: 88vh;
     display: flex; align-items: center;
   }
+  .hero-inner {
+    position: relative; z-index: 1;
+    width: 100%; max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; gap: 60px;
+  }
+  .hero-inner .hero-content { flex: 1; min-width: 0; max-width: 580px; }
+  .hero-photo {
+    flex: 0 0 420px; max-width: 420px;
+    border-radius: 16px; overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+    border: 2px solid rgba(255,255,255,0.1);
+  }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (max-width: 900px) {
+    .hero-inner { flex-direction: column; gap: 40px; }
+    .hero-photo { flex: none; max-width: 100%; width: 100%; max-height: 300px; }
+  }
   .hero-bg {
     position: absolute; inset: 0;
     background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(232,93,0,0.22) 0%, transparent 65%),
@@ -460,29 +477,33 @@ function Home({ setPage }) {
       <div className="hero">
         <div className="hero-bg" />
         <div className="hero-net" />
-        <div className="hero-content">
-          <h1>
-            Open Access.<br/>
-            <em>Open Court.</em><br/>
-            Open Opportunity.
-          </h1>
-          <div className="hero-eyebrow">🏐 Santa Monica–Malibu Public School Athletes</div>
-          <p className="hero-sub">
-          </p>
-          <div className="hero-actions">
-            <button className="btn-primary" onClick={() => { setPage("clinics"); window.scrollTo(0,0); }}>View Upcoming Clinics</button>
-            <button className="btn-outline" onClick={() => { setPage("howitworks"); window.scrollTo(0,0); }}>How It Works</button>
+        <div className="hero-inner">
+          <div className="hero-content">
+            <h1>
+              Open Access.<br/>
+              <em>Open Court.</em><br/>
+              Open Opportunity.
+            </h1>
+            <div className="hero-eyebrow">🏐 Santa Monica–Malibu Public School Athletes</div>
+            <p className="hero-sub">
+            </p>
+            <div className="hero-actions">
+              <button className="btn-primary" onClick={() => { setPage("clinics"); window.scrollTo(0,0); }}>View Upcoming Clinics</button>
+              <button className="btn-outline" onClick={() => { setPage("howitworks"); window.scrollTo(0,0); }}>How It Works</button>
+            </div>
+            <div className="hero-stats">
+              <div className="hero-stat">
+                <div className="hero-stat-num">$15</div>
+                <div className="hero-stat-label">Starting per clinic</div>
+              </div>
+              <div className="hero-stat">
+                <div className="hero-stat-num">Up to 25</div>
+                <div className="hero-stat-label">Attendees per clinic</div>
+              </div>
+            </div>
           </div>
-          <div className="hero-stats">
-            <div className="hero-stat">
-              <div className="hero-stat-num">$15</div>
-              <div className="hero-stat-label">Starting per clinic</div>
-            </div>
-            <div className="hero-stat">
-              <div className="hero-stat-num">Up to 25</div>
-              <div className="hero-stat-label">Attendees per clinic</div>
-            </div>
-
+          <div className="hero-photo">
+            <img src="/clinic-hero.jpg" alt="Coach teaching volleyball clinic at Lincoln Middle School" />
           </div>
         </div>
       </div>
