@@ -668,6 +668,7 @@ function Clinics() {
     </div>
   );
 }
+function HowItWorks() {
   const skills = [
     ["🎯", "Passing Precision"], ["✋", "Setting Consistency"], ["💥", "Hitting Mechanics"],
     ["👣", "Footwork & Positioning"], ["🧠", "Volleyball IQ"],
