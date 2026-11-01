@@ -82,26 +82,30 @@ const STYLES = `
   .hero {
     position: relative; overflow: hidden;
     background: var(--navy);
-    padding: 100px 40px 80px;
+    padding: 100px 0 80px 40px;
     min-height: 88vh;
-    display: flex; align-items: center;
+    display: flex; align-items: stretch;
   }
   .hero-inner {
     position: relative; z-index: 1;
-    width: 100%; max-width: 1200px; margin: 0 auto;
-    display: flex; align-items: center; gap: 60px;
+    width: 100%; max-width: 1400px; margin: 0 auto;
+    display: flex; align-items: stretch; gap: 60px;
   }
-  .hero-inner .hero-content { flex: 1; min-width: 0; max-width: 580px; }
+  .hero-inner .hero-content {
+    flex: 0 0 auto; max-width: 520px; min-width: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    padding-right: 0;
+  }
   .hero-photo {
-    flex: 0 0 420px; max-width: 420px;
-    border-radius: 16px; overflow: hidden;
+    flex: 1; min-width: 0; min-height: 500px;
+    border-radius: 16px 0 0 16px; overflow: hidden;
     box-shadow: 0 24px 60px rgba(0,0,0,0.45);
-    border: 2px solid rgba(255,255,255,0.1);
   }
-  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
   @media (max-width: 900px) {
-    .hero-inner { flex-direction: column; gap: 40px; }
-    .hero-photo { flex: none; max-width: 100%; width: 100%; max-height: 300px; }
+    .hero { padding: 80px 20px 60px; }
+    .hero-inner { flex-direction: column; gap: 32px; align-items: stretch; }
+    .hero-photo { flex: none; min-height: 280px; border-radius: 12px; }
   }
   .hero-bg {
     position: absolute; inset: 0;
