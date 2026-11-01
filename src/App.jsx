@@ -561,6 +561,10 @@ function Home({ setPage }) {
           <button className="btn-primary" onClick={() => { setPage("about"); window.scrollTo(0,0); }}>Learn More About Us</button>
         </div>
       </div>
+      {/* Full-width photo banner */}
+      <div style={{width: "100%", height: "380px", overflow: "hidden", position: "relative"}}>
+        <img src="/clinic-setting.jpg" alt="Athletes practicing setting drills" style={{width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%"}} />
+      </div>
       {/* CTA band */}
       <div style={{background: "var(--gold)", padding: "72px 40px", textAlign: "center"}}>
         <h2 style={{fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,4vw,2.8rem)", color: "var(--navy)", marginBottom: 16}}>
