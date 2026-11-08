@@ -591,7 +591,6 @@ function Clinics() {
     { key: "all", label: "All Clinics" },
     { key: "beginner", label: "Beginner" },
     { key: "intermediate", label: "Intermediate" },
-    { key: "advanced", label: "Advanced" },
     { key: "position", label: "Position-Specific" },
   ];
   const visible = filter === "all" ? CLINICS : CLINICS.filter(c => c.tag === filter);
